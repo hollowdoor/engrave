@@ -1,0 +1,24 @@
+{
+  "name": "es-run",
+  "version": "1.0.0",
+  "description": "Run scripts that contain es2015 modules",
+  "main": "src/index.js",
+  "bin": {
+    "es-run": "src/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node ./rollit"
+  },
+  "keywords": [
+    "es2015",
+    "modules",
+    "exec"
+  ],
+  "author": "Quentin Engles <hollowdoor99@gmail.com> (https://hollowdoor.github.io/)",
+  "license": "MIT",
+  "dependencies": {
+    "es-fork": "^1.0.0"
+  },
+  "devDependencies": {}
+}
