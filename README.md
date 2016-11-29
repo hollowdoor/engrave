@@ -24,7 +24,7 @@ Then run `script.js` with the engrave command `engrave ./script.js`.
 
 es2015 modules will be used, and any commonjs (using require) will also work.
 
-You can also use `engrave` in a shebang.
+You can also use `engrave` with a Unix shebang.
 
 `script.js` with shebang.
 
