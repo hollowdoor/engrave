@@ -1,0 +1,211 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'uninstall', '-g', 'engrave' ]
+2 info using npm@3.10.8
+3 info using node@v7.0.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly uninstall loadAllDepsIntoIdealtree
+19 silly loadAllDepsIntoIdealTree Finishing
+20 silly loadIdealTree Finishing
+21 silly currentTree lib
+21 silly currentTree └─┬ engrave@1.0.0
+21 silly currentTree   ├── ansi-regex@2.0.0
+21 silly currentTree   ├── ansi-styles@2.2.1
+21 silly currentTree   ├── babel-code-frame@6.16.0
+21 silly currentTree   ├── babel-core@6.18.2
+21 silly currentTree   ├── babel-generator@6.19.0
+21 silly currentTree   ├── babel-helper-builder-binary-assignment-operator-visitor@6.18.0
+21 silly currentTree   ├── babel-helper-define-map@6.18.0
+21 silly currentTree   ├── babel-helper-explode-assignable-expression@6.18.0
+21 silly currentTree   ├── babel-helper-function-name@6.18.0
+21 silly currentTree   ├── babel-helper-get-function-arity@6.18.0
+21 silly currentTree   ├── babel-helper-optimise-call-expression@6.18.0
+21 silly currentTree   ├── babel-helper-remap-async-to-generator@6.18.0
+21 silly currentTree   ├── babel-helper-replace-supers@6.18.0
+21 silly currentTree   ├── babel-helpers@6.16.0
+21 silly currentTree   ├── babel-messages@6.8.0
+21 silly currentTree   ├── babel-plugin-syntax-async-functions@6.13.0
+21 silly currentTree   ├── babel-plugin-syntax-async-generators@6.13.0
+21 silly currentTree   ├── babel-plugin-syntax-exponentiation-operator@6.13.0
+21 silly currentTree   ├── babel-plugin-syntax-object-rest-spread@6.13.0
+21 silly currentTree   ├── babel-plugin-syntax-trailing-function-commas@6.13.0
+21 silly currentTree   ├── babel-plugin-transform-async-generator-functions@6.17.0
+21 silly currentTree   ├── babel-plugin-transform-async-to-generator@6.16.0
+21 silly currentTree   ├── babel-plugin-transform-es2015-classes@6.18.0
+21 silly currentTree   ├── babel-plugin-transform-exponentiation-operator@6.8.0
+21 silly currentTree   ├── babel-plugin-transform-object-rest-spread@6.19.0
+21 silly currentTree   ├── babel-preset-stage-3@6.17.0
+21 silly currentTree   ├── babel-register@6.18.0
+21 silly currentTree   ├── babel-runtime@6.18.0
+21 silly currentTree   ├── babel-template@6.16.0
+21 silly currentTree   ├── babel-traverse@6.19.0
+21 silly currentTree   ├── babel-types@6.19.0
+21 silly currentTree   ├── babylon@6.14.1
+21 silly currentTree   ├── balanced-match@0.4.2
+21 silly currentTree   ├── brace-expansion@1.1.6
+21 silly currentTree   ├── browser-resolve@1.11.2
+21 silly currentTree   ├── builtin-modules@1.1.1
+21 silly currentTree   ├── chalk@1.1.3
+21 silly currentTree   ├── concat-map@0.0.1
+21 silly currentTree   ├── convert-source-map@1.3.0
+21 silly currentTree   ├── core-js@2.4.1
+21 silly currentTree   ├── debug@2.3.3
+21 silly currentTree   ├── detect-indent@4.0.0
+21 silly currentTree   ├── es-spawn@1.0.0
+21 silly currentTree   ├── escape-string-regexp@1.0.5
+21 silly currentTree   ├── estree-walker@0.2.1
+21 silly currentTree   ├── esutils@2.0.2
+21 silly currentTree   ├── globals@9.14.0
+21 silly currentTree   ├── has-ansi@2.0.0
+21 silly currentTree   ├── home-or-tmp@2.0.0
+21 silly currentTree   ├── invariant@2.2.2
+21 silly currentTree   ├── is-finite@1.0.2
+21 silly currentTree   ├── js-tokens@2.0.0
+21 silly currentTree   ├── jsesc@1.3.0
+21 silly currentTree   ├── json5@0.5.1
+21 silly currentTree   ├── lodash@4.17.2
+21 silly currentTree   ├── loose-envify@1.3.0
+21 silly currentTree   ├── minimatch@3.0.3
+21 silly currentTree   ├── minimist@0.0.8
+21 silly currentTree   ├── mkdirp@0.5.1
+21 silly currentTree   ├── ms@0.7.2
+21 silly currentTree   ├── number-is-nan@1.0.1
+21 silly currentTree   ├── object-assign@4.1.0
+21 silly currentTree   ├── os-homedir@1.0.2
+21 silly currentTree   ├── os-tmpdir@1.0.2
+21 silly currentTree   ├── path-is-absolute@1.0.1
+21 silly currentTree   ├── private@0.1.6
+21 silly currentTree   ├── regenerator-runtime@0.9.6
+21 silly currentTree   ├── repeating@2.0.1
+21 silly currentTree   ├── resolve@1.1.7
+21 silly currentTree   ├── rollup-plugin-babel@2.6.1
+21 silly currentTree   ├── rollup-plugin-node-resolve@2.0.0
+21 silly currentTree   ├── rollup-pluginutils@1.5.2
+21 silly currentTree   ├── rollup@0.36.4
+21 silly currentTree   ├── slash@1.0.0
+21 silly currentTree   ├── source-map-support@0.4.6
+21 silly currentTree   ├── source-map@0.5.6
+21 silly currentTree   ├── strip-ansi@3.0.1
+21 silly currentTree   ├── supports-color@2.0.0
+21 silly currentTree   ├── tmp@0.0.31
+21 silly currentTree   └── to-fast-properties@1.0.2
+22 silly idealTree lib
+23 silly generateActionsToTake Starting
+24 silly install generateActionsToTake
+25 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/ansi-regex
+26 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/babel-plugin-syntax-async-functions
+27 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/ansi-styles
+28 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/babel-plugin-syntax-async-generators
+29 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/babel-plugin-syntax-exponentiation-operator
+30 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/babel-plugin-syntax-object-rest-spread
+31 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/babel-plugin-syntax-trailing-function-commas
+32 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/babylon
+33 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/balanced-match
+34 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/builtin-modules
+35 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/concat-map
+36 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/brace-expansion
+37 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/convert-source-map
+38 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/core-js
+39 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/escape-string-regexp
+40 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/estree-walker
+41 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/esutils
+42 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/globals
+43 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/has-ansi
+44 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/js-tokens
+45 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/jsesc
+46 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/json5
+47 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/lodash
+48 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/loose-envify
+49 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/invariant
+50 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/minimatch
+51 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/minimist
+52 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/mkdirp
+53 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/ms
+54 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/debug
+55 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/number-is-nan
+56 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/is-finite
+57 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/object-assign
+58 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/os-homedir
+59 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/os-tmpdir
+60 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/home-or-tmp
+61 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/path-is-absolute
+62 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/private
+63 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/regenerator-runtime
+64 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/babel-runtime
+65 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/babel-messages
+66 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/babel-plugin-transform-object-rest-spread
+67 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/repeating
+68 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/detect-indent
+69 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/resolve
+70 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/browser-resolve
+71 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/rollup-plugin-node-resolve
+72 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/rollup-pluginutils
+73 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/slash
+74 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/source-map
+75 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/source-map-support
+76 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/rollup
+77 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/strip-ansi
+78 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/supports-color
+79 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/chalk
+80 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/babel-code-frame
+81 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/tmp
+82 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/to-fast-properties
+83 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/babel-types
+84 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/babel-generator
+85 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/babel-helper-get-function-arity
+86 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/babel-helper-optimise-call-expression
+87 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/babel-traverse
+88 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/babel-helper-explode-assignable-expression
+89 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/babel-helper-builder-binary-assignment-operator-visitor
+90 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/babel-plugin-transform-exponentiation-operator
+91 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/babel-template
+92 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/babel-helper-function-name
+93 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/babel-helper-define-map
+94 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/babel-helper-remap-async-to-generator
+95 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/babel-plugin-transform-async-generator-functions
+96 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/babel-plugin-transform-async-to-generator
+97 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/babel-preset-stage-3
+98 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/babel-helper-replace-supers
+99 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/babel-helpers
+100 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/babel-core
+101 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/babel-register
+102 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/babel-plugin-transform-es2015-classes
+103 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/rollup-plugin-babel
+104 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules/es-spawn
+105 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave
+106 warn checkPermissions Missing write access to /usr/lib/node_modules/engrave/node_modules
+107 warn checkPermissions Missing write access to /usr/lib/node_modules
+108 silly rollbackFailedOptional Starting
+109 silly rollbackFailedOptional Finishing
+110 silly runTopLevelLifecycles Finishing
+111 silly install printInstalled
+112 verbose stack Error: EACCES: permission denied, access '/usr/lib/node_modules/engrave/node_modules/ansi-regex'
+113 verbose cwd /home/spirit/Projects/JSLibs/engrave
+114 error Linux 4.4.0-47-generic
+115 error argv "/usr/bin/nodejs" "/usr/bin/npm" "uninstall" "-g" "engrave"
+116 error node v7.0.0
+117 error npm  v3.10.8
+118 error path /usr/lib/node_modules/engrave/node_modules/ansi-regex
+119 error code EACCES
+120 error errno -13
+121 error syscall access
+122 error Error: EACCES: permission denied, access '/usr/lib/node_modules/engrave/node_modules/ansi-regex'
+122 error  { Error: EACCES: permission denied, access '/usr/lib/node_modules/engrave/node_modules/ansi-regex'
+122 error   errno: -13,
+122 error   code: 'EACCES',
+122 error   syscall: 'access',
+122 error   path: '/usr/lib/node_modules/engrave/node_modules/ansi-regex' }
+123 error Please try running this command again as root/Administrator.
+124 verbose exit [ -13, true ]

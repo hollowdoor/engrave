@@ -26,7 +26,7 @@ es2015 modules will be used, and any commonjs (using require) will also work.
 
 You can also use `engrave` with a Unix shebang.
 
-`script.js` with shebang.
+`script.js` with a Unix shebang.
 
 ```javascript
 #!/usr/bin/env engrave
