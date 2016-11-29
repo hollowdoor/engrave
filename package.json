@@ -1,14 +1,13 @@
 {
-  "name": "es-run",
+  "name": "engrave",
   "version": "1.0.0",
   "description": "Run scripts that contain es2015 modules",
   "main": "src/index.js",
   "bin": {
-    "es-run": "src/index.js"
+    "engrave": "src/index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node ./rollit"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "es2015",
@@ -18,7 +17,18 @@
   "author": "Quentin Engles <hollowdoor99@gmail.com> (https://hollowdoor.github.io/)",
   "license": "MIT",
   "dependencies": {
-    "es-fork": "^1.0.0"
+    "es-spawn": "^1.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hollowdoor/engrave.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hollowdoor/engrave/issues"
+  },
+  "homepage": "https://github.com/hollowdoor/engrave#readme"
 }

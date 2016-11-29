@@ -1,11 +1,15 @@
 #!/usr/bin/env node
-const fork = require('es-fork');
+const spawn = require('es-spawn');
 const stat = require('fs').stat;
+const path = require('path');
+
 const command = process.argv[2] ? process.argv[2] : null;
 const argv = [].concat(process.argv).slice(3);
 const execPath = process.argv[0];
 const env = Object.create(process.env);
-env.ES_RUN = true;
+const thisName = 'engrave';
+
+env[thisName.toUpperCase() + '_ENVIRONMENT'] = true;
 
 main();
 
@@ -21,32 +25,34 @@ function main(){
 function runCommand(){
     if(command){
         if(!/^-/.test(command)){
-            return forkCommand().catch(error=>{
+            return spawnCommand().catch(error=>{
                 if(error instanceof SyntaxError){
                     return Promise.resolve(error);
                 }else{
-                    return forkDefault();
+                    return spawnDefault();
                 }
 
             });
         }else{
-            return forkDefault();
+            return spawnDefault();
         }
     }else{
-        return forkDefault();
+        return spawnDefault();
     }
 }
 
-function forkCommand(){
-    return fork(command, argv, {
-        execPath: execPath,
-        env: env
-    });
+function spawnCommand(){
+    return spawn(command, argv, createOptions());
 }
 
-function forkDefault(){
-    return fork('./titan.js', argv, {
+function spawnDefault(){
+    return spawn('./titan.js', argv, createOptions());
+}
+
+function createOptions(){
+    return {
         execPath: execPath,
-        env: env
-    });
+        env: env,
+        argv0: __filename
+    };
 }

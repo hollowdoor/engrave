@@ -1,10 +1,10 @@
-#!/usr/bin/env engrave
+#!../
 import { readFile } from 'fs';
 console.log('shebang!');
 console.log('This is an executable.');
 console.log(process.argv);
 //console.log('process.env ',process.env)
-console.log('process.env.ENGRAVE_ENVIRONMENT ',process.env.ENGRAVE_ENVIRONMENT)
+console.log('process.env.ES_RUN ',process.env.ES_RUN)
 readFile('./file.json', 'utf8', (err, str)=>{
     console.log('file.json contents ', str);
 });
@@ -26,5 +26,5 @@ myAsync();
 
 /*
 Make executable on Linux
-chmod u+x ex.js
+chmod u+x ex2.js
 */
