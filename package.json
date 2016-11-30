@@ -1,6 +1,6 @@
 {
   "name": "engrave",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Run scripts that contain es2015 modules",
   "main": "index.js",
   "bin": {
