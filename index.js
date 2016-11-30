@@ -2,9 +2,14 @@
 const spawn = require('es-spawn');
 const stat = require('fs').stat;
 const path = require('path');
+const normalSpawn = require('child_process').spawn;
+const getArgv = require('./lib/get_argv');
 
-const command = process.argv[2] ? process.argv[2] : null;
-const argv = [].concat(process.argv).slice(3);
+const argv_obj = getArgv();
+const command = argv_obj.command;
+const argv0 = argv_obj.argv0;
+const argv = argv_obj.argv;
+const execArgv = argv_obj.execArgv;
 const execPath = process.argv[0];
 const env = Object.create(process.env);
 const thisName = 'engrave';
@@ -14,7 +19,11 @@ env[thisName.toUpperCase() + '_ENVIRONMENT'] = true;
 main();
 
 function main(){
-    //console.log('index.js argv ',argv)
+
+    if(argv.indexOf('--help') !== -1 || argv.indexOf('-h') !== -1){
+        console.log('helpful')
+    }
+
     runCommand().then(child=>{
 
     }).catch(error=>{
@@ -46,13 +55,21 @@ function spawnCommand(){
 }
 
 function spawnDefault(){
-    return spawn('./titan.js', argv, createOptions());
+    return spawn('./engrave.js', argv, createOptions())
+    .catch(function(error){
+        console.error(
+            'Error: No first argument to engrave, '+
+            'or no engrave.js file found. '+
+            'Run the engrave command like `engrave filename.js`'
+        );
+    });
 }
 
 function createOptions(){
     return {
         execPath: execPath,
+        execArgv: execArgv,
         env: env,
-        argv0: __filename
+        argv0: argv0
     };
 }

@@ -2,9 +2,9 @@
   "name": "engrave",
   "version": "1.0.1",
   "description": "Run scripts that contain es2015 modules",
-  "main": "src/index.js",
+  "main": "index.js",
   "bin": {
-    "engrave": "src/index.js"
+    "engrave": "index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
