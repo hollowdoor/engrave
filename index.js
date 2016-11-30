@@ -32,6 +32,7 @@ function main(){
 }
 
 function runCommand(){
+    console.log('what')
     if(command){
         if(!/^-/.test(command)){
             return spawnCommand().catch(error=>{
