@@ -39,6 +39,18 @@ console.log(path.join(__dirname, 'script.js'));
 
 See [es-spawn](https://github.com/hollowdoor/es_spawn) to learn more about what enables engrave's functions.
 
+The Default
+-----------
+
+If you don't pass a script name as a command then the default will be tried.
+
+The default with no script argument to `engrave` is an `engrave.js` file in the current directory.
+
+Arguments to node
+-----------------
+
+If you pass any flags to `engrave` before the script argument those arguments will be used by node.
+
 es2015 and Beyond
 -----------------
 
