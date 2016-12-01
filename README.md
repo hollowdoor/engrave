@@ -1,6 +1,8 @@
 engrave
 ===
 
+![engrave logo](https://cldup.com/Ir-O0xVBpb.svg)
+
 Install
 ------
 
