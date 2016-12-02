@@ -41,12 +41,43 @@ console.log(path.join(__dirname, 'script.js'));
 
 See [es-spawn](https://github.com/hollowdoor/es_spawn) to learn more about what enables engrave's functions.
 
-The Default
+~~The Default
 -----------
 
 If you don't pass a script name as a command then the default will be tried.
 
-The default with no script argument to `engrave` is an `engrave.js` file in the current directory.
+The default with no script argument to `engrave` is an `engrave.js` file in the current directory.~~
+
+Script Loading Procedure
+------------------------
+
+The way `engrave` loads an executable js file has changed.
+
+`engrave`'s "main" script loading procedure works like node's.
+
+This is how the procedure plays out:
+
+1. `engrave` attempts to load a `package.json` file
+    1. If there is a file name in one of these fields
+        * jsnext:main
+        * main
+    2. the found script is loaded by `engrave`, or else
+2. `engrave` looks for one of these files to load instead:
+    1. index.js
+    2. main.js
+    3. ingrave.js
+3. The loaded script is executed or
+4. `engrave` passes any flags to nodejs or
+5. `engrave` fails with an error message
+
+Global Executables
+------------------
+
+As you can imagine global executables are a little odd to work with. `engrave` does support globally installed scripts though.
+
+You can make any executable script global you want by changing to it's directory, and running `npm install -g`.
+
+It's suggested that you only do this for your personal scripts, and do not publish a script to npm that depends on `engrave`. Third party dependencies can be hairy for node modules. If you feel that you must have `engrave` as a dependency you can place `npm install -g engrave@<version>` in the `scripts.postinstall` field of your package.json. As long as the semver version is strict you should be ok, but be careful. If you do that there could still be a permission problem so you still shouldn't expect to rely on this kind of dependency.
 
 Arguments to node
 -----------------

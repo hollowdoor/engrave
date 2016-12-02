@@ -1,0 +1,14 @@
+{
+  "name": "test-global",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+      "test-global": "main.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Quentin Engles <hollowdoor99@gmail.com> (https://hollowdoor.github.io/)",
+  "license": "ISC"
+}

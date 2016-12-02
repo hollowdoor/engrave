@@ -3,7 +3,7 @@ import { readFile } from 'fs';
 console.log('process.argv ',process.argv);
 console.log('process.argv0 ',process.argv0)*/
 //console.log('process.env ',process.env)
-console.log('running ', __filename)
+console.log('running ', __filename);
 readFile('./file.json', 'utf8', (err, str)=>{
     console.log('file.json contents ', str);
 })

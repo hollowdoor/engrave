@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 var spawn = require('es-spawn');
 var stat = require('fs').stat;
-var path = require('path');
+var resolveCommand = require('./lib/resolve_command');
 var normalSpawn = require('child_process').spawn;
 var getArgv = require('./lib/get_argv');
 
+var cwd = process.cwd();
 var argv_obj = getArgv();
 var command = argv_obj.command;
 var argv0 = argv_obj.argv0;
@@ -15,6 +16,7 @@ var env = Object.create(process.env);
 var thisName = 'engrave';
 
 env[thisName.toUpperCase() + '_ENVIRONMENT'] = true;
+
 
 main();
 
@@ -32,45 +34,23 @@ function main(){
 
 function runCommand(){
 
-    if(command){
+    return spawnCommand().catch(function(error){
         /*
-        The first argument value might be a command, or a flag.
-        If it's a flag then try the default.
+        Syntax errors will bubble to the surface from rollup.
+        These should be show up right away.
+        So here we are.
         */
-        if(!/^-/.test(command)){
-            return spawnCommand().catch(function(error){
-                /*
-                Syntax errors will bubble to the surface from rollup.
-                These should be show up right away.
-                So here we are.
-                */
-                if(error instanceof SyntaxError){
-                    return Promise.resolve(error);
-                }else{
-                    /*
-                    No syntax error was found try to use the default.
-                    */
-                    return spawnDefault();
-                }
 
-            });
+        if(error instanceof SyntaxError){
+            return Promise.resolve(error);
         }else{
-            return spawnDefault();
+            /*
+            No syntax error was found try to use the default.
+            */
+            return spawnOther();
         }
-    }else{
-        return spawnDefault();
-    }
-}
 
-function spawnCommand(){
-    return spawn(command, argv, createOptions());
-}
-
-function spawnDefault(){
-    /*
-    The default can be used instead of a command from arguments.
-    */
-    return spawn('./engrave.js', execArgv.concat(argv), createOptions())
+    })
     .catch(function(error){
 
         if(execArgv){
@@ -84,6 +64,31 @@ function spawnDefault(){
         );
     });
 }
+
+function spawnCommand(){
+    return resolveCommand(cwd, command).then(function(command){
+        return spawn(command, argv, createOptions());
+    });
+}
+
+function spawnOther(){
+    var a = execArgv.concat(argv);
+    var o = createOptions();
+
+    return spawn('./index.js', a, o)
+    .catch(spawnWith('./main.js', a, o))
+    .catch(spawnWith('./engrave.js', a, o));
+}
+
+function spawnWith(command, a, o){
+    return function spawning(error){
+        if(error instanceof SyntaxError){
+            return Promise.resolve(error);
+        }
+        return spawn(command, a, o);
+    };
+}
+
 
 function runExecArg(){
     /*
@@ -102,6 +107,7 @@ function runExecArg(){
 
 function createOptions(){
     return {
+        cwd: cwd,
         execPath: execPath,
         execArgv: execArgv,
         env: env,

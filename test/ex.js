@@ -2,7 +2,7 @@
 import { readFile } from 'fs';
 console.log('shebang!');
 console.log('This is an executable.');
-console.log(process.argv);
+//console.log(process.argv);
 //console.log('process.env ',process.env)
 console.log('process.env.ENGRAVE_ENVIRONMENT ',process.env.ENGRAVE_ENVIRONMENT)
 readFile('./file.json', 'utf8', (err, str)=>{
