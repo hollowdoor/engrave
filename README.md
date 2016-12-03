@@ -41,22 +41,17 @@ console.log(path.join(__dirname, 'script.js'));
 
 See [es-spawn](https://github.com/hollowdoor/es_spawn) to learn more about what enables engrave's functions.
 
-~~The Default
------------
-
-If you don't pass a script name as a command then the default will be tried.
-
-The default with no script argument to `engrave` is an `engrave.js` file in the current directory.~~
 
 Script Loading Procedure
 ------------------------
 
-The way `engrave` loads an executable js file has changed.
+The way `engrave` loads an executable js file has changed. It used to load only by command argument.
 
 `engrave`'s "main" script loading procedure works like node's.
 
 This is how the procedure plays out:
 
+0. You pass a script name on the command line or
 1. `engrave` attempts to load a `package.json` file
     1. If there is a file name in one of these fields
         * jsnext:main
@@ -75,7 +70,7 @@ Global Executables
 
 As you can imagine global executables are a little odd to work with. `engrave` does support globally installed scripts though.
 
-You can make any executable script global you want by changing to it's directory, and running `npm install -g`.
+You can make any executable script global you want to by changing to it's directory, and running `npm install -g`.
 
 It's suggested that you only do this for your personal scripts, and do not publish a script to npm that depends on `engrave`. Third party dependencies can be hairy for node modules. If you feel that you must have `engrave` as a dependency you can place `npm install -g engrave@<version>` in the `scripts.postinstall` field of your package.json. As long as the semver version is strict you should be ok, but be careful. If you do that there could still be a permission problem so you still shouldn't expect to rely on this kind of dependency.
 
@@ -89,6 +84,27 @@ es2015 and Beyond
 
 By default `engrave` runs es2015 modules, and [stage 3 ecma javascript](http://babeljs.io/docs/plugins/preset-stage-3/).
 
-If you want more you can place a [.babelrc](https://babeljs.io/docs/usage/babelrc/) in the directory that contains your script. Add what ever `babel` plugins and presets to `.babelrc` to get the functionality you want.
+If you want more you can place a [.babelrc](https://babeljs.io/docs/usage/babelrc/) in the directory that contains your script. `npm install` and add what ever `babel` plugins and presets to `.babelrc` to get the functionality you want.
 
 Underneath `engrave` uses `rollup` to pre-compile es2015 modules. So you get the benefits of using `rollup` which includes module static analysis. You can also use [rollup presets](http://rollupjs.org/guide/#using-rollup-with-babel) in your `.babelrc` file.
+
+If you create your own `.babelrc` the default *stage-3* presets won't be used.
+
+Contributing
+------------
+
+Please file issues for any bugs you find.
+
+### Pull Requests
+
+For documentation you can just do a pull request when you want. For any source code modifications, or dependency changes please post an issue before you start to make changes. Otherwise if you see any lingering open issues go ahead, and make a pull request.
+
+### Major changes
+
+If you want to make a massive change to `engrave` post an issue. We can create a dev branch to isolate those changes.
+
+### Testing
+
+There really isn't any TDD being used here. The way `engrave` works is a little strange so it's hard to figure out exactly how to do TDD, or if TDD is even useful for this kind of application. For now to test something make a folder name starting with the word test that contains files to test, and run those files through `engrave`.
+
+In the future some novel way of testing might be integrated into the `engrave` code.
