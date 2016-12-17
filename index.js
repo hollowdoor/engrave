@@ -27,8 +27,9 @@ function main(){
         Nothing to do here yet.
         The command was successful, but what should happen to the child?
         */
+
     }).catch(error=>{
-        console.error(`something went boom! ${error}`);
+        console.error('engrave says: ',error);
     });
 }
 
@@ -42,7 +43,7 @@ function runCommand(){
         */
 
         if(error instanceof SyntaxError){
-            return Promise.resolve(error);
+            return Promise.reject(error);
         }else{
             /*
             No syntax error was found try to use the default.
@@ -53,15 +54,15 @@ function runCommand(){
     })
     .catch(function(error){
 
-        if(execArgv){
-            return runExecArg();
+        if(error instanceof SyntaxError){
+            return Promise.reject(error);
         }
 
-        console.error(
-            'Error: No first argument to engrave, '+
-            'or no engrave.js file found. '+
-            'Run the engrave command like `engrave filename.js`'
-        );
+        if(execArgv && !command){
+            return runExecArg();
+        }
+        return Promise.reject(error);
+        //console.error('engrave: ', error);
     });
 }
 
